@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sociomol"
+version = "0.0.0"
+authors = [
+  { name="Long Chen", email="longleochen91@gmail.com" },
+]
+description = "Clustering of subtomograms based on orientation and distance"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["numpy",
+"pandas",
+"prettytable",
+"scipy",
+"plotly",
+"dash==2.15.0",
+"dash_bootstrap_components",
+"dash_bootstrap_templates",
+"dash_extensions",
+"dash_daq",
+"flask",
+"imodmodel",
+"emfile",
+"pyyaml",
+"starfile",
+"eulerangles"]
+
+
+[project.scripts]
+sociomol = "sociomol:dash_ui.main"
+
+[project.urls]
+"Homepage" = "https://github.com/LongLeoChen91/SocioMol"
+"Bug Tracker" = "https://github.com/LongLeoChen91/SocioMol/issues"
